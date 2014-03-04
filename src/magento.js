@@ -1,8 +1,10 @@
 var home = require('./pages/home');
 
 var magento = function () {
-	this.pages =  {
+	this.base_url = 'http://demo.magentocommerce.com';
+	this.pages = {
 		home : new home(this)
 	};
 };
+
 module.exports = magento;
