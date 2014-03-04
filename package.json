@@ -1,0 +1,26 @@
+{
+  "name": "magento-checklist",
+  "version": "0.0.0",
+  "description": "Acceptance tests to ensure a Magento instance matches our quality criteria",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/casperjs test tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/occitech/magento-checklist.git"
+  },
+  "keywords": [
+    "magento",
+    "casperjs"
+  ],
+  "author": "Occitech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/occitech/magento-checklist/issues"
+  },
+  "homepage": "https://github.com/occitech/magento-checklist",
+  "devDependencies": {
+    "casperjs": "^1.1.0-beta3"
+  }
+}
