@@ -5,6 +5,8 @@ var magento = function () {
 
 	this.unsecure_directories = ['downloader', 'var', 'media'];
 
+	this.sitemaps = [];
+
 	this.pages = {
 		home : new home(this)
 	};
