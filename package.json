@@ -4,7 +4,7 @@
   "description": "Acceptance tests to ensure a Magento instance matches our quality criteria",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/casperjs test tests"
+    "test": "casperjs test tests"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,8 @@
     "url": "https://github.com/occitech/magento-checklist/issues"
   },
   "homepage": "https://github.com/occitech/magento-checklist",
-  "devDependencies": {
-    "casperjs": "^1.1.0-beta3"
+  "dependencies": {
+    "casperjs": "^1.1.0-beta3",
+    "phantomjs": "^1.9.7-1"
   }
 }
