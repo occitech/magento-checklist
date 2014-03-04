@@ -4,7 +4,7 @@
   "description": "Acceptance tests to ensure a Magento instance matches our quality criteria",
   "main": "index.js",
   "scripts": {
-    "test": "casperjs test tests"
+    "test": "casperjs test ./tests --includes=$npm_config_app_path"
   },
   "repository": {
     "type": "git",
