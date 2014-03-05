@@ -9,3 +9,13 @@ casper.test.begin('Unsecured directories are safe', _app.unsecure_directories.le
 		test.done();
 	});
 });
+
+casper.test.begin('The admin url is not /admin', 1, function suite(test) {
+	var default_admin_url = _app.base_url + '/admin';
+
+	casper.start(default_admin_url, function () {
+		test.assertHttpStatus(404, 'The administration area is not located at ' + default_admin_url);
+	}).run(function() {
+		test.done();
+	});
+});
