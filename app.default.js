@@ -4,7 +4,8 @@ var magento = require('./src/magento');
 var app = function() {
 	app.super_.apply(this, arguments);
 
-	this.base_url = '';
+	// Customize the default Magento application settings here
+	// this.base_url = 'http://www.your-application.example.com';
 };
 
 utils.inherits(app, magento);
