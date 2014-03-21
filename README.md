@@ -21,6 +21,12 @@ magento application with your own configurations.
 
 It is convenient to use your own Page Objects for instance.
 
+You can skip tests if they are irrelevants for your project adding
+
+```
+this.irrelevantTests = ['test_to_skip'];
+```
+
 ## Any suggestions?
 
 Use [issues](https://github.com/occitech/magento-checklist/issues) or [pull requests](https://github.com/occitech/magento-checklist/pulls).
