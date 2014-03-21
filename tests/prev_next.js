@@ -2,8 +2,9 @@ var _app = new app();
 var category = _app.pages.category;
 
 casper.test.begin('Paginated pages have rel prev and next set', 2, function suite(test) {
-	var paginatedCategoryUrl = category.url(_app.categories[0]);
+	_app.skipIrrelevantTest(test, 2, 'prev_next');
 
+	var paginatedCategoryUrl = category.url(_app.categories[0]);
 	if (paginatedCategoryUrl.length == 0) {
 		test.skip(2, 'No category found.');
 	} else {

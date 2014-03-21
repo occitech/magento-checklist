@@ -19,6 +19,18 @@ var magento = function () {
 		home : new home(this),
 		category: new category(this)
 	};
+	this.irrelevantTests = [];
+};
+
+magento.prototype.isIrrelevant = function isIrrelevant(testName) {
+	return (this.irrelevantTests.indexOf(testName) != -1);
+};
+
+magento.prototype.skipIrrelevantTest = function skipIrrelevantTest(test, nb, name) {
+	if (this.isIrrelevant(name)) {
+		test.skip(nb, 'Irrelevant test ' + name);
+		test.done();
+	}
 };
 
 module.exports = magento;

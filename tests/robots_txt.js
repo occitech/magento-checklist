@@ -1,6 +1,8 @@
 var _app = new app();
 
 casper.test.begin('A robots.txt file exists', 1, function suite(test) {
+	_app.skipIrrelevantTest(test, 1, 'robots_txt');
+
 	var robots_txt_url = _app.base_url + '/robots.txt';
 
 	casper.start(robots_txt_url, function () {

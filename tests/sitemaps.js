@@ -1,6 +1,8 @@
 var _app = new app();
 
 casper.test.begin("Sitemaps exist", _app.sitemaps.length, function suite(test) {
+	_app.skipIrrelevantTest(test, 1, 'sitemaps');
+
 	var sitemapUrls = _app.sitemaps.map(function(url) {
 		return _app.base_url + "/" + url
 	});

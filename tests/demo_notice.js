@@ -1,6 +1,8 @@
 var _app = new app();
 
 casper.test.begin('Demo store notice ?', 1, function suite(test) {
+	_app.skipIrrelevantTest(test, 1, 'demo_notice');
+
 	var in_production = _app.is_production || false;
 	casper.start(_app.base_url, function () {
 		if (in_production) {

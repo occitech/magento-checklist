@@ -2,6 +2,8 @@ var _app = new app();
 var category = _app.pages.category;
 
 casper.test.begin('Canonical Link is set on categories pages', _app.categories.length, function suite(test) {
+	_app.skipIrrelevantTest(test, 1, 'canonical');
+
 	var categoriesUrls = _app.categories.map(function(slug) {
 		return category.url(slug);
 	});
